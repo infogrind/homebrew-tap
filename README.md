@@ -19,3 +19,4 @@ Available Formulae:
 * `massrename` - Mass-rename files using regular expressions
 * `fullpath` - Show full path of any file or directory
 * `allflac2mp3` - On-the-fly conversion of flac files to mp3
+* `videoinfo` - Display video stream info (codec)
