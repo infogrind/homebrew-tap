@@ -5,7 +5,7 @@ class Allflac2mp3 < Formula
   sha256 "adb86cf0b99a3d97027c8c7f98bf9ca0f7b59d4817cdb0c205eb68204a71bae0"
 
   # depends_on "cmake" => :build
-  depends_on "lame" => :run
+  depends_on "lame"
   depends_on "flac" => :build
 
   def install
