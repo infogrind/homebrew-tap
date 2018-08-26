@@ -16,7 +16,8 @@ Afterwards, simply install the available Formulae like you would any other using
 
 Available Formulae:
 
-* `massrename` - Mass-rename files using regular expressions
-* `fullpath` - Show full path of any file or directory
 * `allflac2mp3` - On-the-fly conversion of flac files to mp3
+* `fullpath` - Show full path of any file or directory
+* `imdbtag` - Quickly and easily rename downloaded movie files using TMDb (not IMDb!) lookup
+* `massrename` - Mass-rename files using regular expressions
 * `videoinfo` - Display video stream info (codec)
