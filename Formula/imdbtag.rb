@@ -58,6 +58,6 @@ class Imdbtag < Formula
   end
 
   test do
-    system "false"
+    assert_predicate bin/"imdbtag", :exist?
   end
 end
