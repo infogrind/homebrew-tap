@@ -10,42 +10,6 @@ class Checkurl < Formula
   end
 
   test do
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
-    legit_urls = [
-      "https://www.google.com",
-      "https://www.facebook.com",
-      "https://www.twitter.com",
-    ]
-    bogus_urls = [
-      "http://www.asiojrandomblabla.com",
-      "http://eweas.sdfs.net",
-      "http://www33.bumbalabalabumm.org",
-    ]
-
-    errors = false
-
-    legit_urls.each do |url|
-      pass = test_url(url, 0)
-      errors = true if pass == false
-    end
-
-    bogus_urls.each do |url|
-      pass = test_url(url, 1)
-      errors = true if pass == false
-    end
-  end
-
-  def test_url(url, expected)
-    print "Testing #{url}..."
-    result = system "#{bin}/checkurl", url
-    if result == expected
-      puts "OK"
-    else
-      puts "ERROR"
-      errors = true
-    end
-
-    errors == false
+    assert_predicate bin/"checkurl", :exist?
   end
 end
