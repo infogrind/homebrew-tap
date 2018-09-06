@@ -1,8 +1,8 @@
 class Hostcheck < Formula
   desc "Shell script to check if internet hosts are reachable"
   homepage "https://github.com/infogrind/hostcheck"
-  url "https://github.com/infogrind/hostcheck/archive/v0.1.tar.gz"
-  sha256 "d3f46c728d8380f8b2de9be634aa9d13a68e8c34f0934cf414cc5a12a856d5fc"
+  url "https://github.com/infogrind/hostcheck/archive/v0.2.tar.gz"
+  sha256 "1769d025f350d1540b021a295dba620fc159181af673283a028872962ecf82ad"
 
   def install
     bin.install "hostcheck"
