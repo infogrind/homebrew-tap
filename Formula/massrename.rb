@@ -3,8 +3,8 @@ class Massrename < Formula
 
   desc "Tool to mass-rename files using regular expressions"
   homepage "https://github.com/infogrind/massrename"
-  url "https://github.com/infogrind/massrename/archive/refs/tags/v1.6.tar.gz"
-  sha256 "522c19ec15b9a6f05ea1e43cd18ac5112eee4af61ea393405da6d9a1086c4204"
+  url "https://github.com/infogrind/massrename/archive/refs/tags/v1.6.1.tar.gz"
+  sha256 "0f3494f66d8c0a0e75a99addef66ecf4ab331d9d55735adc067e7c0203a00e0e"
 
   depends_on "python@3.13"
 
