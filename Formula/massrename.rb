@@ -1,11 +1,15 @@
 class Massrename < Formula
+  include Language::Python::Virtualenv
+
   desc "Tool to mass-rename files using regular expressions"
   homepage "https://github.com/infogrind/massrename"
-  url "https://github.com/infogrind/massrename/archive/v1.0.tar.gz"
-  sha256 "6da1628174188f78a12f4aabfb3cee87695efcd92e15377a18f05b059590224b"
+  url "https://github.com/infogrind/massrename/archive/refs/tags/v1.6.tar.gz"
+  sha256 "522c19ec15b9a6f05ea1e43cd18ac5112eee4af61ea393405da6d9a1086c4204"
+
+  depends_on "python@3.13"
 
   def install
-    bin.install "massrename"
+    virtualenv_install_with_resources
   end
 
   test do
