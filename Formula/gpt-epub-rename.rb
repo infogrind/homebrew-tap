@@ -3,16 +3,21 @@ class GptEpubRename < Formula
 
   desc ""
   homepage ""
-  url "https://github.com/infogrind/gpt-epub-rename/archive/refs/tags/v0.93.tar.gz"
-  sha256 "8eabe961fe42ae13fdad0d50549eaccbd79ae482561f08af4ae3aab642f51ec2"
+  url "file:///var/folders/4v/gfx8yp497rs32__0nbbc52xw0000gn/T/gpt-epub-rename-1.0.0.tar.gz"
+  sha256 "afbe16b648079da50f8c2cbcdc80081c890d3b119d98c9c1107b0fa54ac2a4ca"
   license ""
 
   depends_on "python@3.13"
-  depends_on "maturin"
+  depends_on "rust" => :build
 
   resource "annotated_types" do
     url "https://files.pythonhosted.org/packages/ee/67/531ea369ba64dcff5ec9c3402f9f51bf748cec26dde048a2f973a4eea7f5/annotated_types-0.7.0.tar.gz"
     sha256 "aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"
+  end
+
+  resource "anthropic" do
+    url "https://files.pythonhosted.org/packages/41/0d/8f71d535edb0d438f023bd825fb65f67c14fa88a2bd6b75f292a58a63de4/anthropic-0.117.0.tar.gz"
+    sha256 "98107f2b76439641e0ae2a1754087534b8f178dbab99d6eb1bc4b7bc8c744496"
   end
 
   resource "anyio" do
@@ -33,6 +38,11 @@ class GptEpubRename < Formula
   resource "distro" do
     url "https://files.pythonhosted.org/packages/fc/f8/98eea607f65de6527f8a2e8885fc8015d3e6f5775df186e443e0964a11c3/distro-1.9.0.tar.gz"
     sha256 "2fa77c6fd8940f116ee1d6b94a2f90b13b5ea8d019b98bc8bafdcabcdd9bdbed"
+  end
+
+  resource "docstring_parser" do
+    url "https://files.pythonhosted.org/packages/e0/4d/f332313098c1de1b2d2ff91cf2674415cc7cddab2ca1b01ae29774bd5fdf/docstring_parser-0.18.0.tar.gz"
+    sha256 "292510982205c12b1248696f44959db3cdd1740237a968ea1e2e7a900eeb2015"
   end
 
   resource "h11" do
@@ -56,13 +66,13 @@ class GptEpubRename < Formula
   end
 
   resource "jiter" do
-    url "https://files.pythonhosted.org/packages/1e/c2/e4562507f52f0af7036da125bb699602ead37a2332af0788f8e0a3417f36/jiter-0.9.0.tar.gz"
-    sha256 "aadba0964deb424daa24492abc3d229c60c4a31bfee205aedbf1acc7639d7893"
+    url "https://files.pythonhosted.org/packages/45/9d/e0660989c1370e25848bb4c52d061c71837239738ad937e83edca174c273/jiter-0.12.0.tar.gz"
+    sha256 "64dfcd7d5c168b38d3f9f8bba7fc639edb3418abcc74f22fdbe6b8938293f30b"
   end
 
   resource "openai" do
-    url "https://files.pythonhosted.org/packages/3f/6b/6b002d5d38794645437ae3ddb42083059d556558493408d39a0fcea608bc/openai-1.68.2.tar.gz"
-    sha256 "b720f0a95a1dbe1429c0d9bb62096a0d98057bcda82516f6e8af10284bdd5b19"
+    url "https://files.pythonhosted.org/packages/09/48/516290f38745cc1e72856f50e8afed4a7f9ac396a5a18f39e892ab89dfc2/openai-2.9.0.tar.gz"
+    sha256 "b52ec65727fc8f1eed2fbc86c8eac0998900c7ef63aa2eb5c24b69717c56fa5f"
   end
 
   resource "pydantic" do
@@ -86,8 +96,8 @@ class GptEpubRename < Formula
   end
 
   resource "typing_extensions" do
-    url "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz"
-    sha256 "1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"
+    url "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz"
+    sha256 "dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5"
   end
 
   def install
@@ -95,7 +105,8 @@ class GptEpubRename < Formula
   end
 
   test do
-    assert_match "Enter your OpenAI API key",
-      shell_output("echo '123' | #{bin}/gpt-epub-rename 2>&1", 1)
+    assert_path_exists bin/"gpt-epub-rename"
+    assert_match "usage: gpt-epub-rename",
+      shell_output("#{bin}/gpt-epub-rename --help")
   end
 end
