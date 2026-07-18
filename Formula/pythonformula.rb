@@ -3,8 +3,8 @@ class Pythonformula < Formula
 
   desc "Convert a Python uv.lock file to a Homebrew formula dependency format"
   homepage "https://github.com/infogrind/pythonformula"
-  url "https://github.com/infogrind/pythonformula/archive/refs/tags/v1.01.tar.gz"
-  sha256 "be97968a50b9e0bb1ebb38164c8c69d5bfcd6b0680d69f659633f7c3c1283916"
+  url "https://github.com/infogrind/pythonformula/archive/refs/tags/v1.2.1.tar.gz"
+  sha256 "7e813bf76d0bd5a9876418e52977c19e6bdc828d685a131f70f5dfcd9a254e71"
   license "MIT"
 
   depends_on "python@3.13"
@@ -15,7 +15,7 @@ class Pythonformula < Formula
 
   test do
     assert_path_exists bin/"pythonformula"
-    assert_match "",
-      shell_output("echo 'version = 1' | #{bin}/pythonformula 2>&1")
+    assert_match "usage: pythonformula",
+      shell_output("#{bin}/pythonformula --help")
   end
 end
