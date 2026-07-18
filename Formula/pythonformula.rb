@@ -3,8 +3,8 @@ class Pythonformula < Formula
 
   desc "Convert a Python uv.lock file to a Homebrew formula dependency format"
   homepage "https://github.com/infogrind/pythonformula"
-  url "https://github.com/infogrind/pythonformula/archive/refs/tags/v1.2.1.tar.gz"
-  sha256 "7e813bf76d0bd5a9876418e52977c19e6bdc828d685a131f70f5dfcd9a254e71"
+  url "https://github.com/infogrind/pythonformula/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "ecb4fcc683de69f26bd538d19d88210ce05bf02649f868c864ecdab468eaf1a5"
   license "MIT"
 
   depends_on "python@3.13"
