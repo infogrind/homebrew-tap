@@ -3,8 +3,8 @@ class SvaForm < Formula
 
   desc "Monthly SVA Zürich hourly payslips (Stundenlohnabrechnung) and year-end summary"
   homepage "https://github.com/infogrind/sva-form"
-  url "https://github.com/infogrind/sva-form/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "8ec93111e0d1d413124d13020d5b3566e207f6841b257cd927be949f623c6d97"
+  url "https://github.com/infogrind/sva-form/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "7204e5c0de9ed6caef2ca491f7e2257389e5ff4fb34ef87a21778c8364b8a9ad"
   license "MIT"
 
   depends_on "python@3.13"
