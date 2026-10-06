@@ -3,8 +3,9 @@ class Taxcalc < Formula
 
   desc "Estimate Swiss income and wealth taxes (Kanton Zürich + direkte Bundessteuer)"
   homepage "https://github.com/infogrind/taxcalc"
-  url "https://github.com/infogrind/taxcalc/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "b6df735e7e7aebfccac3b7f3c4177f98796123e673d3671fb96f06aa52420fd1"
+  url "https://github.com/infogrind/taxcalc/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "1519177ed15c136a9665fece682aebda02e49982e1d392e2b7f57bdedfdb3f55"
+  license "MIT"
 
   depends_on "python@3.13"
 
