@@ -3,8 +3,8 @@ class Ipadmp4 < Formula
 
   desc "Convert movies to MP4 for the iPad TV app, with surround audio and subtitles"
   homepage "https://github.com/infogrind/ipadmp4"
-  url "https://github.com/infogrind/ipadmp4/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "ecd47014d7bba833ad30f7d7da45c23d720736e56cce06e4483e864443d314a1"
+  url "https://github.com/infogrind/ipadmp4/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "8520a5401ac480484858a4d4f7ddb8aabeaceec05ee2222dc86b785c3488c04e"
   license "MIT"
 
   depends_on "ffmpeg"
