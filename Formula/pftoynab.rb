@@ -3,11 +3,16 @@ class Pftoynab < Formula
 
   desc "Convert PostFinance CSV account exports into YNAB's file-based import format"
   homepage "https://github.com/infogrind/pftoynab"
-  url "https://github.com/infogrind/pftoynab/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "903047402985262c0d65adfe5cb875f7851310608cc22ba66b07f8c94f7312e4"
+  url "https://github.com/infogrind/pftoynab/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "4327987e231e4d108927893af423977c6b5a8dabaee85f9ccc2ebff968c52471"
   license "MIT"
 
   depends_on "python@3.13"
+
+  resource "tomlkit" do
+    url "https://files.pythonhosted.org/packages/08/72/fc01563df95c189a9f65850096bdc205bc2fe37da6c740cd64afaf18d07e/tomlkit-0.15.2.tar.gz"
+    sha256 "83e32755ba1d20d9340bd069ee97e9f6232ba2346b63ffcba425de01f7e327a6"
+  end
 
   def install
     virtualenv_install_with_resources
