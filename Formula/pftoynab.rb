@@ -3,8 +3,8 @@ class Pftoynab < Formula
 
   desc "Convert PostFinance CSV account exports into YNAB's file-based import format"
   homepage "https://github.com/infogrind/pftoynab"
-  url "https://github.com/infogrind/pftoynab/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "0105b209955b97a1b8f8439e416d9ce4693959b6dd0ad66374d9deeb0b1f61a3"
+  url "https://github.com/infogrind/pftoynab/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "1afbc7d0326308bbd37fd7b6263c92f48727784e5ef3d003f035030c6e77b46f"
   license "MIT"
 
   depends_on "python@3.13"
