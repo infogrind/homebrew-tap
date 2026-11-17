@@ -3,8 +3,8 @@ class Hdclear < Formula
 
   desc "Wipe, surface-test and ext4-format an external disk before using it for backups"
   homepage "https://github.com/infogrind/hdclear"
-  url "https://github.com/infogrind/hdclear/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "fb0792e887c4a7da20e8ecb48d94faaa8a27e8787479053c210bd7e6c4855485"
+  url "https://github.com/infogrind/hdclear/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "bef7549897e467757662cee41da81043c8974d7d6722896fa85a8e289b5ce382"
 
   depends_on "python@3.13"
 
