@@ -3,8 +3,8 @@ class Baruch < Formula
 
   desc "Rule-based backup of a Synology NAS to several drives, docked one at a time"
   homepage "https://github.com/infogrind/baruch"
-  url "https://github.com/infogrind/baruch/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "382040198a8d634e04d4811bd1b32d6dc928d9cdcc7628f66fd29cf0d3baf377"
+  url "https://github.com/infogrind/baruch/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "ecc58e991af2dc8fb68295c15e9201387b8bbec1e8cdea8cd4d07273d8f5db52"
   license "MIT"
 
   depends_on "libyaml"
